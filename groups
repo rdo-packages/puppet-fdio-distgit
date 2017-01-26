@@ -1,5 +1,5 @@
-# UUID          Group Name
-False 	Non-Interactive Users
-4d0474ca7fac5856bb3b4443b89bdc0013a4108e       	puppet/puppet-fdio-distgit-core
-b60088b9bddd9540ad3a711fecaa1977463b4a78        	puppet/puppet-fdio-distgit-ptl
-global:Registered-Users		Registered Users
+# UUID                                  	Group Name
+#
+4d0474ca7fac5856bb3b4443b89bdc0013a4108e	puppet/puppet-fdio-distgit-core
+b60088b9bddd9540ad3a711fecaa1977463b4a78	puppet/puppet-fdio-distgit-ptl
+global:Registered-Users                 	Registered Users
