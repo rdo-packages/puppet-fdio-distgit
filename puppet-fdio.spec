@@ -1,14 +1,19 @@
-%{!?upstream_version: %global upstream_version %{version}%{?milestone}}
+%{!?upstream_version: %global upstream_version %{commit}}
+%define upstream_name puppet-fdio
+%global commit 9326e4237f4d161f297dc4493ab4928ea6e2bf0f
+%global shortcommit %(c=%{commit}; echo ${c:0:7})
+# DO NOT REMOVE ALPHATAG
+%global alphatag .%{shortcommit}git
 
 Name:                   puppet-fdio
-Version:                XXX
-Release:                XXX
+Version:                0.0.1
+Release:                1%{?alphatag}%{?dist}
 Summary:                Puppet module for fdio projects
 License:                ASL 2.0
 
 URL:                    https://wiki.fd.io/view/Puppet-fdio
 
-Source0:                https://github.com/radez/puppet-fdio/archive/master.tar.gz
+Source0:                https://github.com/radez/%{upstream_name}/archive/%{commit}.tar.gz#/%{upstream_name}-%{shortcommit}.tar.gz
 
 BuildArch:              noarch
 
@@ -43,3 +48,5 @@ cp -rp * %{buildroot}/%{_datadir}/openstack-puppet/modules/fdio/
 
 
 %changelog
+* Thu Feb 09 2017 Alfredo Moralejo <amoralej@redhat.com> 0.0.1-1.9326e42git
+- Ocata update 0.0.1 (9326e4237f4d161f297dc4493ab4928ea6e2bf0f)
