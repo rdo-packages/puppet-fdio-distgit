@@ -6,9 +6,9 @@ Release:                XXX
 Summary:                Puppet module for fdio projects
 License:                ASL 2.0
 
-URL:                    https://wiki.fd.io/view/Puppet-fdio
+URL:                    https://github.com/FDio/puppet-fdio
 
-Source0:                https://github.com/radez/puppet-fdio/archive/master.tar.gz
+Source0:                https://github.com/FDio/puppet-fdio/archive/%{version}.tar.gz
 
 BuildArch:              noarch
 
