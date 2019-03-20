@@ -1,14 +1,18 @@
-%{!?upstream_version: %global upstream_version %{version}%{?milestone}}
+%{!?upstream_version: %global upstream_version %{commit}}
+%global commit 6fd1c8e407eb57bcb42198975dd1fdb1c0de1013
+%global shortcommit %(c=%{commit}; echo ${c:0:7})
+# DO NOT REMOVE ALPHATAG
+%global alphatag .%{shortcommit}git
 
 Name:                   puppet-fdio
-Version:                XXX
-Release:                XXX
+Version:                18.01
+Release:                3%{?alphatag}%{?dist}
 Summary:                Puppet module for fdio projects
 License:                ASL 2.0
 
 URL:                    https://github.com/FDio/puppet-fdio
 
-Source0:                https://github.com/FDio/puppet-fdio/archive/%{version}.tar.gz
+Source0:                https://github.com/FDio/puppet-fdio/archive/%{commit}.tar.gz#/%{name}-%{shortcommit}.tar.gz
 
 BuildArch:              noarch
 
@@ -43,4 +47,7 @@ cp -rp * %{buildroot}/%{_datadir}/openstack-puppet/modules/fdio/
 
 
 %changelog
+* Thu Feb 15 2018 RDO <dev@lists.rdoproject.org> 18.01-3.6fd1c8egit
+- Update to post 18.01 (6fd1c8e407eb57bcb42198975dd1fdb1c0de1013)
+
 
